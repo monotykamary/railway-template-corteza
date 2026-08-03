@@ -1,0 +1,2 @@
+FROM docker.io/library/postgres:17.7-bookworm@sha256:e9243ab06e47223dedeb3c129fa9ece8d37f506bdc6ee943afb9335f98bb4854
+EXPOSE 5432
