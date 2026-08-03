@@ -13,4 +13,7 @@ health=requests.get(base+'/healthcheck',timeout=30);assert health.status_code==2
 version=requests.get(base+'/version',timeout=30);assert version.status_code==200 and '2024.9.9' in version.text
 _,failed=login('not-the-password');assert urllib.parse.urlparse(failed.url).path=='/auth/login'
 _,success=login(password);assert success.status_code==200 and urllib.parse.urlparse(success.url).path=='/auth' and 'Corteza' in success.text
+for app in ('admin','compose','workflow'):
+    page=requests.get(base+'/'+app+'/',timeout=30)
+    assert page.status_code==200 and 'Corteza' in page.text,(app,page.status_code)
 print('Corteza smoke checks passed')
