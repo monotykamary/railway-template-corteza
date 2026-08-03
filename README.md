@@ -1,5 +1,7 @@
 # Corteza on Railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/corteza-low-code?referralCode=ZqgrJ0)
+
 Deploy Corteza 2024.9.9 with embedded web applications, a generated super administrator, PostgreSQL, and durable object storage.
 
 The Deploy on Railway button is added after the published route is verified.
