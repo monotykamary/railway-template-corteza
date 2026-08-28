@@ -2,13 +2,13 @@
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/corteza-low-code?referralCode=ZqgrJ0)
 
-Deploy Corteza 2024.9.9 with embedded web applications, a generated super administrator, PostgreSQL, and durable object storage.
+Deploy Corteza 2024.9.10 with embedded web applications, a generated super administrator, PostgreSQL, and durable object storage.
 
 The Deploy on Railway button is added after the published route is verified.
 
 ## What this deploys
 
-- Corteza `2024.9.9` all-in-one server and webapps, pinned to the official image digest
+- Corteza `2024.9.10` all-in-one server and webapps, pinned to the official image digest
 - PostgreSQL `17.7-bookworm`, pinned to its Linux/AMD64 digest and initialized below the volume mount via `PGDATA`
 - Generated administrator, JWT, cookie, CSRF, and database secrets
 - Daily-backed-up Corteza object storage and PostgreSQL volumes
@@ -36,8 +36,8 @@ BASE_URL=https://your-domain.example ADMIN_EMAIL=admin@example.com ADMIN_PASSWOR
 
 ## Upstream
 
-- Source: https://github.com/cortezaproject/corteza/tree/2024.9.9
-- Release: https://github.com/cortezaproject/corteza/releases/tag/2024.9.9
+- Source: https://github.com/cortezaproject/corteza/tree/2024.9.10
+- Release: https://github.com/cortezaproject/corteza/releases/tag/2024.9.10
 - Documentation: https://docs.cortezaproject.org/
 - License: Apache License 2.0
 

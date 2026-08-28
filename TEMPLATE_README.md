@@ -2,7 +2,7 @@
 
 ## About Hosting Corteza
 
-Corteza is an open-source low-code platform for data applications, records, workflows, reports, privacy tooling, roles, and integrations. This template deploys stable version 2024.9.9 with PostgreSQL and generated super-administrator credentials.
+Corteza is an open-source low-code platform for data applications, records, workflows, reports, privacy tooling, roles, and integrations. This template deploys stable version 2024.9.10 with PostgreSQL and generated super-administrator credentials.
 
 Sign in with `CORTEZA_ADMIN_EMAIL` and the generated `CORTEZA_ADMIN_PASSWORD` service variable.
 

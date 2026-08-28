@@ -10,7 +10,7 @@ def login(candidate):
     return session,response
 
 health=requests.get(base+'/healthcheck',timeout=30);assert health.status_code==200 and 'pass' in health.text.lower()
-version=requests.get(base+'/version',timeout=30);assert version.status_code==200 and '2024.9.9' in version.text
+version=requests.get(base+'/version',timeout=30);assert version.status_code==200 and '2024.9.10' in version.text
 _,failed=login('not-the-password');assert urllib.parse.urlparse(failed.url).path=='/auth/login'
 _,success=login(password);assert success.status_code==200 and urllib.parse.urlparse(success.url).path=='/auth' and 'Corteza' in success.text
 for app in ('admin','compose','workflow'):
