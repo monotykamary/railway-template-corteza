@@ -18,7 +18,7 @@ Sign in with `CORTEZA_ADMIN_EMAIL` and the generated `CORTEZA_ADMIN_PASSWORD` se
 ### Deployment Dependencies
 
 - Corteza all-in-one web and API service with daily-backed-up object storage
-- Private PostgreSQL 17.7 with daily backups
+- Private PostgreSQL 17.11 with daily backups
 - Optional external SMTP, Corredor, object storage, and observability services
 
 ### Implementation Details

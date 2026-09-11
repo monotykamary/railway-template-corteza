@@ -11,6 +11,6 @@
 
 ## PostgreSQL
 
-- Version: 17.7
+- Version: 17.11
 - Source: https://www.postgresql.org/
 - License: PostgreSQL License

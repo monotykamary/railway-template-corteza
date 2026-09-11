@@ -9,7 +9,7 @@ The Deploy on Railway button is added after the published route is verified.
 ## What this deploys
 
 - Corteza `2024.9.10` all-in-one server and webapps, pinned to the official image digest
-- PostgreSQL `17.7-bookworm`, pinned to its Linux/AMD64 digest and initialized below the volume mount via `PGDATA`
+- PostgreSQL `17.11-bookworm`, pinned to its Linux/AMD64 digest and initialized below the volume mount via `PGDATA`
 - Generated administrator, JWT, cookie, CSRF, and database secrets
 - Daily-backed-up Corteza object storage and PostgreSQL volumes
 
