@@ -5,8 +5,9 @@ base=${BASE_URL:-http://127.0.0.1:80}
 state=${SMOKE_STATE:-/data/railway-product-proof}
 phase=${SMOKE_PHASE:?}
 case "$phase" in boot|upgrade|redeploy) ;; *) exit 2;; esac
-token=${CORTEZA_TOKEN:-$(corteza-server auth jwt "$CORTEZA_ADMIN_EMAIL" 2>/dev/null | "$b" tail -n 1)}
-[ -n "$token" ]
+# Cobra command output may be stderr; capture both but keep only the JWT, never logs.
+token=${CORTEZA_TOKEN:-$(corteza-server auth jwt "$CORTEZA_ADMIN_EMAIL" 2>&1 | "$b" grep -E '^[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+$' | "$b" tail -n 1)}
+[ -n "$token" ] || { echo "JWT generation returned no token" >&2; exit 1; }
 tmp=/tmp/corteza-proof-$$
 "$b" mkdir -p "$tmp"
 trap '"$b" rm -rf "$tmp"' EXIT INT TERM
